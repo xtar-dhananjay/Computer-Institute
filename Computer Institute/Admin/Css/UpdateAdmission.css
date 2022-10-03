@@ -1,0 +1,148 @@
+#Admission-Page{
+    padding: 20px;
+}
+
+#FormCont{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(131, 72, 255, 0.49);
+}
+
+#FormCont h2{
+    background: var(--Main-Color);
+    padding: 12px 0;
+    text-align: center;
+    color: var(--White-Color);
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#Form{
+    padding: 20px 30px;
+}
+
+#Form #Student_D1{
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-gap: 30px;
+    margin-bottom: 12px;
+}
+
+#Form #Student_D1 #StudentImg{
+    background: rgba(255, 255, 255, 0.35);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#Form #Student_D1 #StudentImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Form #Student_D1 #BasicFields{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Form #Student_D1 #BasicFields input{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 3px;
+    color: var(--Font-Color);
+}
+
+#Form #Student_D2 .Field2{
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Form #Student_D2 .Field2 input, #Form #Student_D2 .Field2 select, #Form #Address{
+    width: 48%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.35);
+    border: none;
+    padding: 0 15px;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    border-radius: 3px;
+    color: var(--Font-Color);
+}
+
+#Form #Address{
+    width: 100%;
+}
+
+#Form button{
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    font-size: 18px;
+    border: none;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Make Responsive */
+@media (max-width: 550px) {
+    #Form #Student_D1{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    #Form #Student_D1 #BasicFields input{
+        margin-top: 12px;
+    }
+    #Form #Student_D2 .Field2{
+        flex-direction: column;
+    }
+    #Form #Student_D2 .Field2 input, #Form #Student_D2 .Field2 select{
+        margin-bottom: 12px;
+    }
+    #Form #Student_D2 .Field2{
+        margin-bottom: 0;
+    }
+    #Form #Student_D2 .Field2 input, #Form #Student_D2 .Field2 select{
+        width: 100%;
+    }
+    #Form button, #Form #Student_D1 #StudentImg{
+        cursor: default;
+    }
+    #Form #Student_D1 #StudentImg{
+        width: 210px;
+        margin: auto;
+        max-width: 100%;
+    }
+    #Form {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    #FormCont h2{
+        font-size: 25px;
+    }
+}

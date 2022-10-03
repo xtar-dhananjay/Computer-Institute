@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background: #8549FE;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#Container{
+    background: white;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    height: fit-content;
+    margin-top: 100px;
+    border-radius: 4px;
+    padding: 20px 25px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 8px;
+
+}
+
+#Container img{
+    width: 120px;
+    max-width: 100%;
+}
+
+#Container form{
+    margin-top: 7px;
+}
+
+#Container form div{
+    border: 1px solid #8549FE;
+    height: 37px;
+    margin-bottom: 6px;
+    border-radius: 2px;
+}
+
+#Container form div#Password{
+    margin-bottom: 0;
+}
+
+#Container form div .material-icons.input{
+    width: 40px;
+    border-right: 1px solid #8549FE;
+    text-align: center;
+    height: 100%;
+    line-height: 34px;
+    float: left;
+    color: #8549FE;
+}
+
+#Container form div input{
+    width: calc(100% - 40px);
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 10px;
+    color: #3d3d3d;
+}
+
+#loginBtn{
+    width: 100%;
+    margin-top: 10px;
+    background: #8549FE;
+    color: #ffffff;
+    font-weight: 300;
+    height: 38px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#Container form div{
+    position: relative;
+}
+
+#Container form div .material-icons.Eye{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    line-height: 34px;
+    color: #d3d3d3;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+#PasswordInput{
+    padding-left: 30px;
+}
+
+
+#Container form div#Password input{
+    padding-right: 45px;
+}

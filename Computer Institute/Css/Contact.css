@@ -1,0 +1,148 @@
+#Mian_Contact{
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Contact_1 */
+#Googla_Maps{
+    margin-top: 30px;
+}
+
+
+#Googla_Maps iframe{
+    width: 100%;
+}
+ 
+/* Contact_2 */
+#Contact_Box{
+    margin-top: 70px;
+    display: grid;    
+    grid-template-columns: 350px 1fr;
+    margin-bottom: 150px;
+    grid-column-gap: 40px;
+}
+
+#ContactDeatils{
+    height: fit-content;
+}
+
+#ContactDeatils .Con_Info{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+#ContactDeatils .Con_Info img{
+    margin-top: 2px;
+}
+
+#ContactDeatils .Con_Info div{
+    margin-left: 20px;
+}
+
+#ContactDeatils .Con_Info div h2{
+    font-size: 23px;
+    font-weight: 500;
+    color: var(--First-Color);
+}
+
+#ContactDeatils .Con_Info div p{
+    font-size: 16px;
+    color: var(--Para-Color);
+    margin-top: 5px;
+}
+
+#Contact_Form{
+    background: #EDE4FF;
+    border: 1px solid #8348ff80;
+    border-radius: 2px;
+    height: fit-content;
+}
+
+#Contact_Form h2{
+    background: var(--First-Color);
+    color: var(--White-Color);
+    text-align: center;
+    font-size: 25px;
+    padding: 12px 0;
+    font-weight: 400;
+}
+
+#Contact_Form form{
+    padding: 20px 30px;
+}
+
+/* Remove number type input scroller */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#Contact_Form form input, #Contact_Form form textarea{
+    display: flex;
+    width: 100%;
+    background: rgba(131, 72, 255, 0.05);
+    border: 1px solid #8348ff66;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 17px;
+    color: var(--Font-Color);
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 2px;
+}
+
+#Contact_Form form textarea{
+    padding: 10px 20px;
+    height: 140px;
+    resize: none;
+}
+
+#Contact_Form form #SubmitBTN{
+    text-align: right;
+}
+
+#Contact_Form form #SubmitBTN button{
+    background: var(--First-Color);
+    color: var(--White-Color);
+    width: 200px;
+    height: 38px;
+    font-size: 18px;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Make Responsive */
+@media (max-width: 800px) {
+    #Contact_Box{
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    #Contact_Box{
+        grid-template-columns: 1fr;
+    }
+
+    #Contact_Form{
+        margin-top: 50px;
+    }    
+
+    #Contact_Form form #SubmitBTN button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 500px){
+        
+    #Contact_Form form #SubmitBTN button{
+        width: 100%;
+    }
+    #Contact_Form form {
+        padding: 15px;
+    }
+}

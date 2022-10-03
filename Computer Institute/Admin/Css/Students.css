@@ -1,0 +1,333 @@
+#Students-Page{
+    padding: 20px;
+}
+
+/* Users_1 */
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#TopBar button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+/* Students_2 */
+#SearchBox{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#SearchBox input::placeholder{
+    color: #ffffffaf;
+}
+
+#SearchBox input, #SearchBox select{
+    border: none;
+    background: #ffffff36;
+    border-radius: 5px;
+    font-weight: 100;
+    padding: 0 20px;
+    font-size: 16px;
+    outline: none;
+    color: var(--White-Color);
+    width: 500px;
+    height: 38px;
+}
+
+#SearchBox select{
+    width: 250px;
+}
+
+#SearchBox select option{
+    color: var(--Font-Color);
+}
+
+/* Students_3 */
+#Students_3{
+    margin-bottom: 100px;
+}
+
+#Table{
+    margin-top: 15px;
+    overflow: auto;
+}
+
+
+#Table table{
+    min-width: 1000px;
+    width: 100%;
+}
+
+#Table table, #Table th, #Table table td {
+    border-collapse: collapse;
+    border: 1px solid var(--Main-Color);
+    padding: 10px;
+    text-align: center;
+}
+
+#Table table thead {
+    background: var(--Main-Color);
+    color: var(--White-Color);
+}
+
+#Table table thead th {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#Table table td {
+    color: var(--Para-Color);
+    font-size: 18px;
+}
+
+#Table table td .Edit, #Table table td .Trash, #Table table td .Profile , #Table table td .CourseIcon{
+    font-size: 20px;
+    color: #0bbb0b;
+    cursor: pointer;
+}
+
+#Table table td .Trash {
+    color: #ff0000;
+}
+
+#Table table td .Profile, #Table table td .CourseIcon{
+    color: var(--Main-Color);
+}
+
+#LoadMore{
+    margin: 30px 0;
+    text-align: center;
+}
+
+#LoadMore #LoadMoreBtn{
+    width: 200px;
+    color: var(--White-Color);
+    background: var(--Main-Color);
+    border: none;
+    height: 38px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Student_4 */
+#Student_4{
+   position: fixed; 
+   top: 0;
+   left: 0;
+   background: #8248ffc0;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+   z-index: -100;
+   opacity: 0;
+   pointer-events: none;
+   transform: scale(0);
+}
+
+#Student_4.Active{
+   z-index: 100;
+   opacity: 1;
+   pointer-events: auto;
+   transform: scale(1);
+}
+
+#Student_4 #CourseForm{
+    background: var(--White-Color);
+    border-radius: 4px;
+    width: 650px;
+    overflow: hidden;
+    overflow: auto;
+    max-height: calc(100vh - 40px);
+}
+
+#Student_4 #CourseForm h2{
+    background: var(--Main-Color);
+    padding: 12px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+#Student_4 #CourseForm #Form{
+    padding: 25px;
+}
+
+#Form #AllCourse .Course:first-child{
+    margin-top: 0;
+}
+
+#Form #AllCourse .Course{
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: var(--Main-Color);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 2px;
+}
+
+#Form #AllCourse .Course select, #Form #AllCourse .Ddate, #Form #AllCourse i{
+    background: rgba(217, 217, 217, 0.5);
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    padding-left: 15px;
+    font-size: 16px;
+    color: #ffffffaf;
+    outline: none;
+}
+
+#Form #AllCourse .Course .SelectCourse{
+    width: 200px;
+
+}
+
+#Form #AllCourse i{
+    color: #ff0000af;
+    font-size: 20px;
+}
+
+#Form #AllCourse .Course select option{
+    color: var(--Font-Color);
+}
+
+#Form #AllCourse i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+    padding-left: 0;
+}
+
+#Form #AddCourse{
+    background: rgba(131, 72, 255, 0.5);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 20px;
+    color: var(--Main-Color);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+}
+
+#Form #AddCourse i{
+    margin-right: 10px;
+}
+
+#Form #Btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#Form #Btns button{
+    width: 48%;   
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-weight: 300;
+    border-radius: 3px;
+    border: 1px solid var(--Main-Color);
+    cursor: pointer;
+}
+
+#Form #Btns #Cancel{
+    background: transparent;
+    color: var(--Main-Color);
+    font-weight: 400;
+}
+
+@media (max-width: 1140px) {
+    #SearchBox input{
+        width: 350px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #SearchBox{
+        flex-direction: column;
+    }
+    #SearchBox input{
+        margin-bottom: 10px;
+    }
+    #SearchBox input, #SearchBox select{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 668px){
+    #Form #AllCourse .Course{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    #Form #AllCourse i{
+        width: 100%;
+    }
+    #Form #AllCourse .Course .SelectCourse{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #TopBar button, #LoadMore #LoadMoreBtn, #Table table td .Edit, #Table table td .Trash, #Table table td .Profile{
+        cursor: default;
+    }
+    #Form #Btns button, #Form #AddCourse, #Form #AllCourse i{
+        cursor: default;
+    }
+}
+
+@media (max-width: 450px){
+    #Form #AllCourse .Course{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 384px) {
+    #TopBar{
+        flex-direction: column;
+    }
+    #TopBar button{
+        margin-top: 10px;
+    }
+}

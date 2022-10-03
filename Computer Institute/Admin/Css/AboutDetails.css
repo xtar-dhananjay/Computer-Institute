@@ -1,0 +1,90 @@
+#AboutDetails-Page{
+    padding: 20px;
+}
+
+#AboutDetails_1{
+    margin-bottom: 100px;
+}
+
+#Form{
+    background: #dfd0ff;
+    padding: 25px;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 800px;
+    margin: auto;
+    border: 1px solid #c1a4ff;
+}
+
+#Form h2{
+    text-align: center;
+    margin: 10px 0 30px;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--Main-Color);
+}
+
+#Form h3{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    position: relative;
+    width: fit-content;
+}
+
+#Form h3::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: var(--Main-Color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+#Form input{
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+
+}
+
+#Form textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 15px 20px;
+}
+
+#Form textarea, #Form input{
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+#Form input{
+    margin-bottom: 10px;
+}
+
+#Form .About{
+    margin-bottom: 15px;
+}
+
+#UdpateCont{
+    text-align: right;
+}
+
+#UdpateCont button{
+    width: 200px;
+    max-width: 100%;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    background: var(--Main-Color);
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 300;
+    cursor: pointer;
+}

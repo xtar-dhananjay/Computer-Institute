@@ -1,0 +1,30 @@
+
+window.onload = () => {
+    
+    // let LastUrl = document.referrer;
+    // if (LastUrl.match('=')) {
+    //     let FirstArray = LastUrl.split('/');
+    //     let LastItem = '';
+    //     FirstArray.forEach( e => {
+    //         LastItem = e;
+    //     })
+    //     let mainName = LastItem.split('.')[0];
+    //     console.log(mainName);
+    //     if (mainName == 'UpdateAdmission') {
+    //         console.log('Xtar Dhananjay');
+    //     }
+    // }
+
+    // history.pushState('id', 'hello')
+}
+// window.onpopstate = (e) => {
+//     console.log(e.state);
+// }
+
+let hi = true;
+if (hi == false) {
+    console.log('hi');
+}else{
+    console.log('hi1');
+    hi = false;
+}

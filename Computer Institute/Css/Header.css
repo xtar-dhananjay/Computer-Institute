@@ -1,0 +1,170 @@
+#Main-Header-1{
+    background: var(--First-Color);
+    width: 100%;
+    margin: auto;
+    height: 65px;
+    position: sticky;
+    top: 0;
+}
+
+#Main-Header-2{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    padding: 0 20px;
+    position: relative;
+}
+
+#Main-Header-2 .Logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Main-Header-2 .Logo a{
+    text-decoration: none;
+    color: var(--White-Color);
+    font-size: 32px;
+    font-weight: 500;
+}
+
+#Main-Header-2 .Pages ul{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 100%;
+    align-items: center;
+    color: var(--Font-Color);
+    font-weight: 500;
+}
+
+#Main-Header-2 .Pages ul li{
+    list-style: none;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+
+#Main-Header-2 .Pages ul li a{
+    text-decoration: none;
+    color: var(--White-Color);
+}
+
+#Main-Header-2 .Pages ul li:not(.RemoveBar)::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: -6px;
+    transform: translateX(-17%);
+    height: 3px;
+}
+
+#Main-Header-2 .Pages ul li.ActivePage::after{
+    width: 150%;
+    background: var(--White-Color);
+    transition: all 0.3s ease;
+}
+
+#Main-Header-2 .Pages ul li.ActivePage a{
+    color: var(--White-Color);
+}
+
+#Main-Header-2 .Pages ul li:not(.RemoveBar):hover::after{
+    width: 150%;
+    background: var(--White-Color);
+    transition: all 0.3s ease;
+}
+
+#Main-Header-2 .material-icons{
+    display: none;
+}
+
+/* This is for User Profile Picture */
+#ManuBar a .HUser-Profile{
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    margin-top: 4px;
+}
+
+@media (max-width: 950px) {
+    #Main-Header-2 .Pages ul{
+        width: 450px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    #Main-Header-2 {
+        padding: 0;
+    }
+    
+    #Main-Header-2 .material-icons{
+        display: block;
+        font-size: 37px;
+        cursor: default;
+        color: var(--White-Color);
+    }
+        
+    #Main-Header-2 .Logo{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    #Main-Header-2 .Pages ul{
+        position: absolute;
+        left: 0;
+        width: 0;
+        overflow: hidden;
+        z-index: 100;
+        top: 65px;
+        flex-direction: column;
+        justify-content: unset;
+        background: var(--First-Color);
+        border-top: 1px solid var(--First-Color);
+        height: calc(100vh - 65px);
+        transition: all 0.5s cubic-bezier(0.35, 1.16, 0.05, 1.19);
+        overflow: auto;
+    }
+    
+    #Main-Header-2 .Pages ul.ActiveBar{
+        width: 100%;
+        z-index: 200;
+    }
+
+    #Main-Header-2 .Pages ul li{
+        margin-top: 40px;
+    }
+
+    #Main-Header-2 .Pages ul li #LoginBtn, #Main-Header-2 .Pages ul li,#Main-Header-2 .Pages ul li a{
+        cursor: default;
+    }
+        
+    #Main-Header-2 .Pages ul li #LoginBtn{
+        margin-bottom: 40px;
+    }
+
+    #Main-Header-2 .Pages ul li:not(.RemoveBar):hover::after{
+        width: 0;
+        background: unset;
+        transition: unset;
+    }
+        
+    #Main-Header-2 .Logo a{
+        cursor: default;
+    }
+
+    
+
+}
+
+
+

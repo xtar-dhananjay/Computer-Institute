@@ -1,0 +1,293 @@
+#UploadCourse-Page{
+    padding: 20px;
+}
+
+#Top_Title{
+    background: var(--Main-Color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+#Top_Title h2{
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#Top_Title button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#Form{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+#Form form{
+    display: flex;
+}
+
+#Course_Details{
+    max-width: 100%;
+    width: 900px;
+    border-right: 5px solid var(--Main-Color);
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+#BasicD{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-gap: 20px;
+}
+
+#BasicD #CourseImg .material-icons{
+    font-size: 40px;
+    color: var(--Main-Color);
+}
+
+#BasicD #CourseImg p{
+    color: var(--Para-Color);
+}
+
+#BasicD #BasicFields{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#BasicD #BasicFields input, #BasicD #BasicFields select{
+    height: 38px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 15px;
+    outline: none;
+    color: var(--Font-Color);
+}
+
+#BasicD #CourseImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    width: 350px;
+    max-width: 100%;
+    border: 1px solid var(--Main-Color);
+    border-radius: 3px;
+    height: 180px;
+    background: #8248ff49;
+}
+
+#BasicD #CourseImg img{    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#ClassDetails{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#ClassDetails div{
+    background: var(--Main-Color);
+    padding: 15px;
+    border-radius: 3px;
+}
+
+#ClassDetails div input::placeholder{
+    color: #ffffff96;
+}
+
+#ClassDetails div select{
+    background: transparent;
+    border: none;
+    color: var(--White-Color);
+    margin-top: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#ClassDetails div select option{
+    color: var(--Font-Color);
+}
+
+#ClassDetails div h2{
+    color: var(--White-Color);
+    font-weight: 400;
+}
+
+#Course_Description{
+    margin-top: 15px;
+}
+
+#Course_Description h2{
+    font-size: 30px;
+    color: var(--Font-Color);
+}
+
+#Course_Description textarea{
+    outline: none;
+    padding: 15px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    font-size: 17px;
+    font-weight: 300;
+    resize: none;
+    height: 150px;
+}
+
+#Course_Content{
+    max-width: 100%;
+    width: 350px;
+    height: fit-content;
+}
+
+#Course_Content h2{
+    font-size: 30px;
+    color: var(--Font-Color);
+    margin-bottom: 10px;
+}
+
+#AllContent div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#AllContent div:last-child{
+    margin-bottom: 0;
+}
+
+#AllContent div input{
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 1px solid #d3d3d3;
+    outline: none;
+    color: var(--Font-Color);
+}
+
+#AllContent div .material-icons{
+    background: #8348ffb3;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffffe6;
+    user-select: none;
+    cursor: pointer;
+}
+
+#AllContent div.Deactivate{
+    display: none;
+}
+
+#Course_Content button{
+    background: var(--Main-Color);
+    border: none;
+    border-radius: 3px;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    color: var(--White-Color);
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#Form form{
+    border-bottom: 5px solid var(--Main-Color);
+}
+
+/* Make Responsive */
+
+@media (max-width: 1250px) {
+    #Form form{
+        flex-direction: column;
+    }
+    #Course_Details{
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #Form form{
+        border: none;
+    }
+
+    #Course_Content h2{
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 950px){
+    #BasicD{
+        grid-template-columns: 1fr;
+    }
+    #BasicFields input{
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 550px){
+    #ClassDetails div h2{
+        font-size: 20px;
+    }   
+    #Top_Title button, #BasicD #CourseImg, #AllContent div .material-icons, #Course_Content button{
+        cursor: default;
+    }
+    #Course_Description h2, #Course_Content h2{
+        font-size: 27px;
+    }                                                                                        
+}
+
+
+@media (max-width: 400px){
+    #ClassDetails div h2{
+        font-size: 17px;
+        font-weight: 300;
+    }
+    #ClassDetails div select{
+        font-size: 15px;
+    }
+    #BasicD #CourseImg{
+        width: 100%;
+        cursor: default;
+    }
+    #Top_Title{
+        flex-direction: column;
+    }
+    #Top_Title button{
+        margin-top: 8px;
+    }
+    #ClassDetails div{
+        padding: 10px 5%;
+    }
+}

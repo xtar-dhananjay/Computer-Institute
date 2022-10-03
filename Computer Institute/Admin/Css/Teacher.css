@@ -1,0 +1,228 @@
+#Teacher-Page{
+    padding: 20px;
+}
+
+/* Users_1 */
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#TopBar button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#AllTeam {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+#AllTeam .Member {
+    background: #DAC9FF;
+    border: 1px solid rgba(131, 72, 255, 0.5);
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.81, 1.39, 0.62, 1.04);
+}
+
+#AllTeam .Member img {
+    width: 100%;
+}
+
+#AllTeam .Member .Member_Name {
+    color: var(--Font-Color);
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+#AllTeam .Member .Member_Position {
+    color: var(--Main-Color);
+    font-size: 16px;
+}
+
+#AllTeam .Member .Buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#AllTeam .Member .Buttons button{
+    width: 48%;
+    border: none;
+    height: 35px;
+    background: var(--Main-Color);
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--Main-Color);
+    cursor: pointer;
+}
+
+#AllTeam .Member .Buttons button.Delete{
+    background: transparent;
+    color: var(--Main-Color);
+    font-weight: 400;
+}
+
+#Teacher_2 .TeacherForm{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #8248ffc0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+    z-index: -100;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+}
+
+#Teacher_2 .TeacherForm.Active{
+    z-index: 100;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+#Teacher_2 .TeacherForm form{
+    background: #ffffff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+#Teacher_2 .TeacherForm form .UplaodImg{
+    background: #8248ff71;
+    margin: auto;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Main-Color);
+    margin-bottom: 15px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--Main-Color);
+}
+
+#Teacher_2 .TeacherForm form .UplaodImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Teacher_2 .TeacherForm form input.Name{
+    margin-bottom: 5px;
+}
+
+#Teacher_2 .TeacherForm form input{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #9c9c9c;
+    border-radius: 3px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--Font-Color);
+}
+
+#Teacher_2 .TeacherForm form .FormButton{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Teacher_2 .TeacherForm form .FormButton button{
+    width: 48%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-weight: 300;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#Teacher_2 .TeacherForm form .FormButton button:first-child{
+    background: unset;
+    color: var(--Main-Color);
+    border: 1px solid var(--Main-Color);
+    font-weight: 400;
+}
+
+
+
+
+
+
+@media (max-width: 1550px){
+    #AllTeam {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px){
+    #AllTeam {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1000px){
+    #AllTeam {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    #Teacher_2 .TeacherForm form .FormButton button, #TopBar button, #AllTeam .Member .Buttons button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 500px){
+    #AllTeam {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #TopBar {
+        flex-direction: column;
+    }
+    #TopBar button{
+        margin-top: 10px;
+    }
+}
+

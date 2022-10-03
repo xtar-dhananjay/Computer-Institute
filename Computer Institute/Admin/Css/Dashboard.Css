@@ -1,0 +1,239 @@
+#Index-Page{
+    padding: 20px 20px;
+}
+
+#TopTotal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 20px;
+}
+
+#TopTotal .TopTotals{
+    background: var(--Main-Color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 2px;
+}
+
+#TopTotal .TopTotals img{
+    width: 80px;
+}
+
+#TopTotal .TopTotals div h2{
+    font-size: 25px;
+    color: var(--White-Color);
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+#TopTotal .TopTotals div p{
+    color: var(--White-Color);
+    margin-top: 5px;
+    margin-left: 5px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#AddBox_Cont{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px 20px;
+    margin-top: 20px;
+}
+
+#AddBox_Cont .AddBox{
+    background: var(--Main-Color);
+    padding: 15px 30px;
+    border-radius: 2px;
+}
+
+#AddBox_Cont .AddBox h2{
+    font-size: 25px;
+    color: var(--White-Color);
+    font-weight: 500;
+}
+
+#AddBox_Cont .AddBox button{
+    width: 200px;
+    margin-top: 10px;
+    height: 35px;
+    font-size: 16px;
+    color: var(--Main-Color);
+    cursor: pointer;
+    max-width: 100%;
+}
+
+/* DashBoard_2 */
+#Table_Box{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+#Table_Box h2{
+    font-size: 25px;
+    font-weight: 400;
+    padding: 13px 20px;
+    color: var(--White-Color);
+    background: var(--Main-Color);
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+
+#Table_Box table ,#Table_Box th, #Table_Box table thead{
+    border-collapse: collapse;
+}
+
+#Table_Box td button{
+    width: 150px;
+    height: 30px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-weight: 300;
+    font-size: 15px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#Table_Box table thead{
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    
+}
+
+#Table_Box th{
+    font-weight: 100;
+    font-size: 18px;
+    text-align: left;
+    padding: 12px 10px;
+}
+
+#Table_Box td{
+    font-weight: 400;
+    color: var(--Para-Color);
+    font-size: 16px;
+    text-align: left;
+    padding: 8px 10px;
+}
+
+#Table_Box tr{
+    border-bottom: 1px solid var(--Main-Color);
+    
+}
+
+#Table_Box table{
+    width: 100%;
+    border: 1px solid var(--Main-Color);
+}
+
+#MoreInquiry{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#MoreInquiry button{
+    width: 150px;
+    height: 35px;
+    color: var(--White-Color);
+    background: var(--Main-Color);
+    border: none;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* InquiryMessage_Box */
+#InquiryMessage_Box{
+    padding: 0 20px;
+    background: #8248ffc0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    z-index: -100;
+}
+
+#InquiryMessage_Box.Active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 100;
+}
+
+#InquiryMessage_Box #InquiryMessage{
+    width: 400px;
+    background: var(--White-Color);
+    padding: 30px 20px 20px;
+    border-radius: 3px;
+}
+
+#InquiryMessage_Box #InquiryMessage p{
+    color: #474747;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#InquiryMessage_Box #InquiryMessage div{
+    text-align: right;
+}
+
+
+#InquiryMessage_Box #InquiryMessage div button{
+    height: 30px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Make Responsive */
+@media (max-width: 1533px) {
+    #TopTotal{
+        grid-template-columns: repeat(2, 1fr);
+    }    
+    #AddBox_Cont{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    #DashBoard_2{
+        overflow: auto;
+
+    }
+    #Table_Box{
+        min-width: 1000px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #TopTotal{
+        grid-template-columns: repeat(1, 1fr);
+    }    
+    #AddBox_Cont{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #Table_Box td button, #MoreInquiry button, #InquiryMessage_Box #InquiryMessage div button, #AddBox_Cont .AddBox button{
+        cursor: default;
+    }
+    
+
+}

@@ -1,0 +1,177 @@
+#StudentProfile-Page{
+    padding: 20px;
+}
+
+#StudentProfile_1{
+    margin-bottom: 100px;
+}
+
+#Profile{
+    background: #DAC9FF;
+    padding: 25px;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    border: 2px solid var(--Main-Color);
+    border-radius: 5px;
+}
+
+#Profile #Img{
+    text-align: center;
+}
+
+#Profile #Img img{
+    width: 230px;
+    border-radius: 5px;
+    height: 210px;
+    object-fit: cover;
+}
+
+#Profile #StudentDetails #BasicDetails{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    grid-gap: 20px;
+}
+
+#Profile #StudentDetails .BD label{
+    font-size: 20px;
+    color: var(--Main-Color);
+}
+
+#Profile #StudentDetails .BD p{
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.35);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #555555;
+    font-weight: 400;
+    border-radius: 3px;
+}
+
+#Profile #StudentDetails #ContactDetails{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    grid-gap: 20px;
+}
+
+#Profile #StudentDetails #AddressDetails{
+    margin-top: 20px;
+}
+
+#Courses{
+    background: #DAC9FF;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid var(--Main-Color);
+}
+
+#Courses h2{
+    text-align: center;
+    padding: 12px 0;
+    color: var(--White-Color);
+    font-weight: 300;
+    background: var(--Main-Color);
+}
+
+#Courses #AllCourse{
+    padding: 25px;
+}
+
+#Courses #AllCourse .Course p{
+    background: rgba(255, 255, 255, 0.35);
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+#Courses #AllCourse .Course{
+    background: var(--Main-Color);
+    padding: 15px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+#Courses #AllCourse .Course:first-child{
+    margin-top: 0;
+}
+
+#Courses #AllCourse .Course div{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 20px;
+}
+
+#Courses #AllCourse .Course button{
+    padding: 10px 0;
+    width: 100%;
+    color: var(--Main-Color);
+    background: var(--White-Color);
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#Courses #AllCourse .Course div a{
+    width: 100%;
+}
+
+#Courses #AllCourse .Course div p{
+    background: rgba(255, 255, 255, 0.35);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+/* Make Responsive */
+@media (max-width: 1125px) {
+    #Profile #StudentDetails #BasicDetails{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (max-width: 600px){
+    #Courses #AllCourse .Course button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 550px) {
+    #Profile #StudentDetails #BasicDetails, #Profile #StudentDetails #ContactDetails{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #Courses #AllCourse .Course div{
+        grid-gap: 10px;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    #Courses #AllCourse .Course div p{
+        font-size: 15px;
+    }
+    #Courses #AllCourse{
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 370px) {
+    #Courses #AllCourse .Course div p{
+        font-size: 13px;
+    }
+    
+}

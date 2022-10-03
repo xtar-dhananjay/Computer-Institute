@@ -1,0 +1,187 @@
+#Course-Page{
+    padding: 20px;
+}
+
+#Course_Cont{
+    margin-bottom: 100px;
+}
+
+#Course_Cont #Top_Title{
+    background: var(--Main-Color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+#Course_Cont #Top_Title h2{
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#Course_Cont #Top_Title button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#AllCourse{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+
+#AllCourse .Course{
+    /* max-width: 320px; */
+    background: #DAC9FF;
+    border: 1px solid rgba(131, 72, 255, 0.5);
+    padding: 10px 10px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+#AllCourse .Course:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#AllCourse .Course img{
+    width: 100%;
+}
+
+#AllCourse .Course h2 {
+    font-size: 19px;
+    font-weight: 400;
+    margin: 3px 0;
+    color: var(--Font-Color);
+}
+
+#AllCourse .Course a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#AllCourse .Course .Ratings .material-icons {
+    color: var(--Main-Color);
+    font-size: 28px;
+}
+
+#AllCourse .Course .Ratings .material-icons.Dactive {
+    color: #9B9B9B;
+}
+
+#AllCourse .Course .Price-Per {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#AllCourse .Course .Price-Per span {
+    font-size: 22px;
+    color: var(--Font-Color);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+#AllCourse .Course .Price-Per span.material-icons {
+    color: var(--Main-Color);
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+#CourseBtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+#CourseBtns a, #CourseBtns .DeleteBtn{
+    width: 48%;
+    height: 35px;
+}
+
+
+#CourseBtns a button{
+    width: 100%;
+    border: 1px solid var(--Main-Color);
+    background: var(--Main-Color);
+    height: 100%;
+    border-radius: 3px;
+    color: var(--White-Color);
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#CourseBtns .DeleteBtn{
+    background: rgba(255, 255, 255, 0.3);   
+    color: var(--Main-Color);
+    font-weight: 400;
+    border: 1px solid var(--Main-Color);
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#Course_Cont #LoadMore{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#Course_Cont #LoadMore button{
+    width: 150px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 300;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Make Responsive */
+@media (max-width: 1650px) {
+    
+    #AllCourse{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (max-width: 1400px) {
+    
+    #AllCourse{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    
+    #AllCourse{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    
+    #AllCourse{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 380px) {
+    #Top_Title{
+        flex-direction: column;
+    }
+}

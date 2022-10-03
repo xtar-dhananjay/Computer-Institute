@@ -1,0 +1,210 @@
+#Main_CC{
+    width: 1000px;
+    max-width: 100%;
+    padding: 0 20px;
+    margin: auto;
+}
+
+#Certificate_Top{
+    margin-top: 30px;
+}
+
+#Certificate_Top h2{
+    width: 100%;
+    background: var(--First-Color);
+    text-align: center;
+    padding: 8px 0;
+    color: var(--White-Color);
+    font-weight: 400;
+}
+
+#Certificate_Top #SearchBox{
+    margin-top: 20px;
+    height: 43px;
+}
+
+/* Remove number type input scroller */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#Certificate_Top #SearchBox input{
+    outline: none;
+    height: 100%;
+    width: calc(100% - 150px);
+    padding: 0 20px;
+    font-size: 18px;
+    border: 1px solid rgba(131, 72, 255, 0.4);
+    border-radius: 3px 0 0 3px;
+}
+
+#Certificate_Top #SearchBox button{
+    float: right;
+    height: 100%;
+    width: 150px;
+    height: 100%;
+    border: none;
+    background: var(--First-Color);
+    color: var(--White-Color);
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+/* Certificate_2 */
+#Certificate_Result{
+    margin-top: 20px;
+    user-select: none;
+    margin-bottom: 150px;
+    display: none;
+}
+
+#Verified_Box{
+    display: flex;
+    align-items: center;
+    background: #E4D8FF;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+#Verified_Box div{
+    margin-left: 20px;
+}
+
+#Verified_Box div h2{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--First-Color);
+}
+
+#Verified_Box div p{
+    color: var(--Para-Color);
+    font-weight: 400;
+}
+
+#Verified_Box img{
+    width: 100px;
+}
+
+#StudentDetails_Box{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background: #E4D8FF;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+#StudentImg img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#StudentDetails{
+    margin-left: 20px;
+    border-left: 2px solid var(--First-Color);
+    padding-left: 20px;
+}
+
+#StudentDetails h2{
+    font-size: 20px;
+    color: var(--First-Color);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#StudentDetails div:first-child{
+    margin-top: 0;
+}
+
+#StudentDetails div{
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+}
+
+#StudentDetails div span{
+    color: var(--Para-Color);
+}
+
+#StudentDetails div .material-icons{
+    color: var(--First-Color);
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+/* Certificate_3 */
+#Unverified{
+    margin-top: 20px;
+    user-select: none;
+    margin-bottom: 150px;
+    display: none;
+}
+
+/* Make Responsive */
+@media (max-width: 600px){
+    #Certificate_Top #SearchBox button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 570px){
+    #StudentDetails_Box{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #StudentImg{
+        text-align: center;
+        width: 100%;
+    }
+
+    #StudentDetails{
+        padding: unset;
+        border: none;
+        margin-top: 10px;
+    }
+
+    #Verified_Box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #Verified_Box div{
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
+}
+
+
+@media (max-width: 400px){
+    #Certificate_Top #SearchBox{
+        display: flex;
+        flex-direction: column;
+        height: 86px;
+    }
+
+    #Certificate_Top #SearchBox input{
+        border-radius: 3px;
+        width: 100%;
+    }
+    
+    #Certificate_Top #SearchBox button{
+        border-radius: 3px;
+        margin-top: 5px;
+        width: 100%;
+        
+    }
+    #Verified_Box div h2{
+        font-size: 21px;
+    }
+    #Verified_Box div p{
+        font-size: 15px;
+    }
+}

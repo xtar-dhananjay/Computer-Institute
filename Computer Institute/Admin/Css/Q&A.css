@@ -1,0 +1,202 @@
+#QA-Page{
+    padding: 20px;
+}
+
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#TopBar button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#All_QA{
+    margin-top: 20px;
+}
+
+#All_QA .QA{
+    margin-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+
+}
+
+#All_QA .QA:last-child{
+    margin-bottom: 0;
+}
+
+#All_QA .QA .Quation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #DBCAFF;
+    padding: 12px 30px;
+}
+
+#All_QA .QA .Quation h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--Font-Color);
+
+}
+
+#All_QA .QA .Icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#All_QA .QA .Quation .material-icons, #All_QA .QA .Quation i{
+    font-size: 30px;
+    color: var(--Main-Color);
+    cursor: pointer;
+    user-select: none;
+    margin-left: 5px;
+}
+
+#All_QA .QA .Quation i{
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+#All_QA .QA .Quation i.Edit{
+    color: #009300;
+}
+
+#All_QA .QA .Quation i.Trash{
+    color: #ff0000;
+}
+
+#All_QA .QA p{
+    padding: 12px 30px;
+    background: #e7dcff;
+    color: var(--Para-Color);
+    text-align: justify;
+    font-size: 18px;
+    height: 0;
+    padding: 0 30px;
+    transition: padding 0.3s cubic-bezier(0.67, 0.93, 0.72, 1.08);
+}
+
+#All_QA .QA p.Active{
+    height: unset;
+    padding: 12px 30px;
+}
+
+#Add_FormCont, #UP_FormCont{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #8248ffc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: -100;
+    transform: scale(0);
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+}
+
+#Add_FormCont.Active, #UP_FormCont.Active{
+    z-index: 100;
+    transform: scale(1);
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#Add_FormCont form, #UP_FormCont form{
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 600px;
+}   
+
+#Add_FormCont form input, #Add_FormCont form textarea, #UP_FormCont form input, #UP_FormCont form textarea{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #9c9c9c;
+    border-radius: 3px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--Font-Color);
+    color: #333333;
+}
+
+#Add_FormCont form textarea, #UP_FormCont form textarea{
+    resize: none;
+    height: 150px;
+}
+
+#Add_FormCont #AddButtons, #UP_FormCont #UPButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#Add_FormCont #AddButtons button, #UP_FormCont #UPButtons button{
+    width: 48%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-weight: 300;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#Add_FormCont #AddButtons button:first-child, #UP_FormCont #UPButtons button:first-child{
+    background: unset;
+    color: var(--Main-Color);
+    border: 1px solid var(--Main-Color);
+    font-weight: 400;
+}
+
+@media (max-width: 500px){
+    #All_QA .QA .Quation{
+        flex-direction: column;
+    }
+    #All_QA .QA .Quation .Icons{
+        margin-top: 10px;
+    }
+    #All_QA .QA .Quation .material-icons, #All_QA .QA .Quation i, #TopBar button, #Add_FormCont #AddButtons button, #UP_FormCont #UPButtons button{
+        cursor: default;
+    }
+    #TopBar button{
+        margin-top: 10px;
+    }
+    body{
+        background: red;
+    }
+}
+
+@media (max-width: 400px) {
+    #TopBar{
+        flex-direction: column;
+    }
+}

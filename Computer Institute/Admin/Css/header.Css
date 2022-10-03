@@ -1,0 +1,176 @@
+body{
+    background: var(--Page-Color);
+}
+
+#SideBar{
+    width: 300px;
+    background: #f5f1ff;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.4s cubic-bezier(0.49, 1.26, 0.45, 1.14);
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+#SideBar.Active{
+    width: 100px;
+}
+
+#SideBar ul{
+    position: absolute;
+    width: 100%;
+}
+
+#SideBar ul li a{
+    list-style: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: transparent;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--Main-Color);
+    color: var(--Main-Color);
+    margin: 10px 20px;
+}
+
+
+#SideBar ul li #Logo{
+    width: 100%;
+    margin-left: 0;
+    padding-left: 35px;
+    margin-top: 0;
+    height: 70px;
+    line-height: 47px;
+    color: white;
+    background: var(--Main-Color);
+    border-radius: 0;
+}
+
+#SideBar ul li a{
+    text-decoration: none;
+}
+
+
+#SideBar ul li a span:first-child{
+    margin-right: 30px;
+}
+
+#SideBar ul li a{
+    text-decoration: none;
+    color: var(--Main-Color);
+    display: flex;
+    overflow: hidden;
+}
+
+#SideBar ul li:nth-child(1) a{
+    border: none;
+    font-size: 40px;
+    margin-bottom: 40px;
+    padding: 12px;
+}
+
+/* This is the showing the current page with help of height light the Page Name */
+
+#SideBar ul li a.Active{
+    background: var(--Main-Color);
+    border: none;
+    color: var(--White-Color);
+}
+
+/* End */
+
+#DashBoard{
+    width: calc(100% - 300px);
+    left: 300px;
+    position: absolute;
+    max-height: 100vh;
+    transition: all 0.4s cubic-bezier(0.49, 1.26, 0.45, 1.14);
+}
+
+#DashBoard.Active{
+    left: 100px;
+    width: calc(100% - 100px);
+}
+
+#Header{
+    width: 100%;
+    height: 70px;
+    background: var(--Main-Color);
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#Header i{
+    font-size: 30px;
+    color: var(--White-Color);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.49, 1.26, 0.45, 1.14);
+}
+
+#SideBar{
+    overflow: auto;
+}
+
+@media (max-width: 830px){
+        
+    #SideBar{
+        width: 100px;
+    }
+    #DashBoard{
+        left: 100px;
+        width: calc(100% - 100px);
+    }
+    #DashBoard.Active{
+        left: 100px;
+        width: calc(100% - 100px);
+    }
+    #SideBar.Active{
+        width: 250px;
+    }
+
+    #Header i{
+        cursor: default;
+    }
+
+    #Header i.Active{
+        padding-left: 150px;
+    }
+
+    #SideBar ul li a{
+        cursor: default;
+    }
+}
+
+@media (max-width: 700px){
+
+
+    #Header i.Active{
+        padding-left: calc(100% - 100px);
+        position: fixed;
+        z-index: 2;
+    }
+    #SideBar{
+        width: 0;
+    }
+    #SideBar.Active{
+        width: 100%;
+    }
+    #DashBoard{
+        left: 0;
+        width: 100%;
+    }
+    #DashBoard.Active{
+        left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+#Settings-Page{
+    padding: 20px;
+}
+
+#AllSettings{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+#AllSettings div{
+    background: var(--Main-Color);
+    border-radius: 4px;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+#AllSettings div h2 {
+    font-size: 29px;
+    font-weight: 400;
+    color: var(--White-Color);
+}
+
+#AllSettings div button {
+    width: 200px;
+    max-width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    background: var(--White-Color);
+    color: var(--Main-Color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1700px) {
+    #AllSettings{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    #AllSettings{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #AllSettings div button{
+        cursor: default;
+    }
+}

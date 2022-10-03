@@ -1,0 +1,228 @@
+#Users-Page{
+    padding: 20px;
+}
+
+/* Users_1 */
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#TopBar button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#UsersTable{
+    overflow: auto;
+}
+
+#UsersTable table{
+    width: 100%;
+    min-width: 800px;
+}
+
+#UsersTable table ,#UsersTable th, #UsersTable table td{
+    border-collapse: collapse;
+    border: 1px solid var(--Main-Color);
+    padding: 10px;
+    text-align: center;
+}
+
+#UsersTable table thead{
+    background: var(--Main-Color);
+    color: var(--White-Color);
+}
+
+#UsersTable table thead th{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#UsersTable table td{
+    color: var(--Para-Color);
+    font-size: 18px;
+}
+
+#UsersTable table td .Edit{
+    font-size: 20px;
+    color: #0bbb0b;
+    cursor: pointer;
+}
+
+#UsersTable table td .Trash{
+    font-size: 20px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#UsersTable table .CourseName{
+    text-align: left;
+    padding-left: 30px;
+}
+
+#UsersTable table{
+    margin-top: 15px;
+}
+
+/* Users_2 */
+#AddUsers_Form, #UpdateUsers_Form{
+    padding: 0 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    background: #8248ffc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    z-index: -100;
+}
+
+#AddUsers_Form.Active,
+#UpdateUsers_Form.Active
+{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 100;
+
+}
+
+#UpdateUsers_Form.Active, #AddUsers_Form.Active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 100;
+}
+
+#AddUsers_Form #AddForm, #UpdateUsers_Form #UpdateForm{
+    padding: 20px;
+    background: var(--White-Color);
+    width: 450px;
+    border-radius: 4px;
+}
+
+#AddUsers_Form #AddForm #UploadImg_Box, #UpdateUsers_Form #UpdateForm #UP_UploadImg_Box{
+    background: #8248ff71;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#AddUsers_Form #AddForm #UploadImg_Box img,  #UpdateUsers_Form #UpdateForm #UP_UploadImg_Box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#AddUsers_Form #AddForm #UploadImg_Box .material-icons{
+    color: var(--Main-Color);
+    font-size: 30px;
+}
+
+#AddUsers_Form #AddForm #UploadImg_Box p{
+    font-size: 15px;
+    color: var(--Main-Color);
+}
+
+#AddUsers_Form #AddForm form input, #AddUsers_Form #AddForm form select,  #UpdateUsers_Form #UpdateForm input, #UpdateUsers_Form #UpdateForm select{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #9c9c9c;
+    border-radius: 3px;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--Font-Color);
+}
+
+#AddUsers_Form #AddForm .PasswordBox, #UpdateUsers_Form #UpdateForm .PasswordBox{
+    position: relative;
+}
+
+#AddUsers_Form #AddForm .PasswordBox input, #UpdateUsers_Form #UpdateForm .PasswordBox input{
+    padding-right: 48px;
+}
+
+#AddUsers_Form #AddForm .PasswordBox .material-icons, #UpdateUsers_Form #UpdateForm .PasswordBox .material-icons{
+    position: absolute;
+    transform: translateY(38%);
+    color: #b8b8b8;
+    right: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#AddUsers_Form #AddForm form .Form-Button, #UpdateUsers_Form #UpdateForm form .Form-Button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#AddUsers_Form #AddForm form .Form-Button button, #UpdateUsers_Form #UpdateForm form .Form-Button button{
+    width: 48%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-weight: 300;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#AddUsers_Form #AddForm form .Form-Button button.CBtn, #UpdateUsers_Form #UpdateForm form .Form-Button button.CBtn{
+    background: unset;
+    color: var(--Main-Color);
+    border: 1px solid var(--Main-Color);
+    font-weight: 400;
+}
+
+/* Make Responsive */
+@media (max-width: 600px) {
+    #UsersTable table td .Edit, #TopBar button, #UsersTable table td .Trash, #AddUsers_Form #AddForm form .Form-Button button, #UpdateUsers_Form #UpdateForm form .Form-Button button, #AddUsers_Form #AddForm #UploadImg_Box, #UpdateUsers_Form #UpdateForm #UP_UploadImg_Box, #AddUsers_Form #AddForm .PasswordBox .material-icons, #UpdateUsers_Form #UpdateForm .PasswordBox .material-icons{
+        cursor: default;
+    }
+}
+
+@media (max-width: 400px) {
+    #TopBar{
+        flex-direction: column;
+    }
+    #TopBar button{
+        margin-top: 10px;
+    }
+}

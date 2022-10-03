@@ -1,0 +1,73 @@
+#Main_Home{
+    max-width: 100%;
+    width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#Best_Students{
+    margin-top: 40px;
+    margin-bottom: 100px;
+    min-height: 80vh;
+}
+
+#All_Students {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#All_Students .Student {
+    background: #DAC9FF;
+    border: 1px solid rgba(131, 72, 255, 0.5);
+    padding: 15px 10px 13px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#All_Students .Student div p:first-child {
+    color: var(--First-Color);
+    font-size: 18px;
+}
+
+#All_Students .Student div p:last-child {
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+#All_Students .Student img{
+    width: 100%;
+}
+
+#LoadMore{
+    text-align: center;
+}
+
+#LoadMoreBtn{
+    height: 40px;
+    width: 200px;
+    border: none;
+    font-size: 18px;
+    background: var(--First-Color);
+    color: var(--White-Color);
+    border-radius: 3px;
+    margin: 50px 0;
+    cursor: pointer;
+}
+
+/* Make Responsive */
+
+@media (max-width: 750px){
+    #All_Students {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px){
+    #All_Students {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #LoadMoreBtn{
+        cursor: default;
+    }
+}

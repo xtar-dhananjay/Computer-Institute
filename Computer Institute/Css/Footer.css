@@ -1,0 +1,57 @@
+#Main-Footer{
+    width: 100%;
+    background: var(--First-Color);
+    padding: 40px 0 30px;
+}
+
+#Footer-Cont{
+    max-width: 100%;
+    width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#Footer-Cont ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Footer-Cont ul li{
+    list-style: none;
+}
+
+#Footer-Cont ul li a{
+    text-decoration: none;
+    color: var(--White-Color);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#Copy-Right{
+    text-align: center;
+    margin-top: 40px;
+    color: var(--White-Color);
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* Make responsive Footer */
+
+@media (max-width: 600px) {
+    
+    #Footer-Cont ul{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #Footer-Cont ul li{
+        margin-top: 20px;
+    }
+
+    #Footer-Cont ul li a{
+        cursor: default;
+    }
+
+}

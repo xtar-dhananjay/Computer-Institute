@@ -1,0 +1,180 @@
+#Category-Page{
+    padding: 20px;
+}
+
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#TopBar button{
+    width: 150px;
+    height: 37px;
+    font-size: 18px;
+    color: var(--Main-Color);
+    cursor: pointer;
+}
+
+#Category_Table{
+    overflow: auto;
+}
+
+#Category_Table table{
+    width: 100%;
+    min-width: 600px;
+}
+
+#Category_Table table ,#Category_Table th, #Category_Table table td{
+    border-collapse: collapse;
+    border: 1px solid var(--Main-Color);
+    padding: 10px;
+    text-align: center;
+}
+
+#Category_Table table thead{
+    background: var(--Main-Color);
+    color: var(--White-Color);
+}
+
+#Category_Table table thead th{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#Category_Table table td{
+    color: var(--Para-Color);
+    font-size: 18px;
+}
+
+#Category_Table table td .Edit{
+    font-size: 20px;
+    color: #0bbb0b;
+    cursor: pointer;
+}
+
+#Category_Table table td .Trash{
+    font-size: 20px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#Category_Table table .CourseName{
+    text-align: left;
+    padding-left: 30px;
+}
+
+#Category_Table table{
+    margin-top: 15px;
+}
+
+/* Start Making Form */
+#Category_Form, #UP_Category_Form{
+    padding: 0 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    background: #8248ffc0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0);
+    z-index: -100;
+}
+
+#Category_Form.Active, #UP_Category_Form.Active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    z-index: 100;
+}
+
+#Category_Form #Form, #UP_Category_Form #UP_Form{
+    width: 400px;
+    padding: 20px 30px;
+    background: var(--White-Color);
+    border-radius: 3px;
+}
+
+#Category_Form #Form h2, #UP_Category_Form #UP_Form h2{
+    font-size: 25px;
+    color: var(--Font-Color);
+    margin-bottom: 10px;
+}
+
+#Category_Form #Form input, #UP_Category_Form #UP_Form input{
+    width: 100%;
+    padding: 0 10px;
+    height: 35px;
+    border: 1px solid #d3d3d3;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+#Category_Form #Form #Btns, #UP_Category_Form #UP_Form #UP_Btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Category_Form #Form #Btns button, #UP_Category_Form #UP_Form #UP_Btns button{
+    width: 48%;
+    border: none;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 300;
+    background: var(--Main-Color);
+    border-radius: 3px;
+    border: 1px solid var(--Main-Color);
+    color: var(--White-Color);
+    cursor: pointer;
+}
+
+#Category_Form #Form #Btns button:first-child, #UP_Category_Form #UP_Form #UP_Btns button:first-child{
+    background: transparent;
+    color: var(--Main-Color);
+    font-weight: 400;
+}
+
+/* Make Responsive */
+@media (max-width: 600px) {
+    #Category_Table table td .Edit, #TopBar button, #Category_Table table td .Trash{
+        cursor: default;
+    }
+    #Category_Form #Form #Btns button, #UP_Category_Form #UP_Form #UP_Btns button{
+        cursor: default;
+    }   
+}
+
+@media (max-width: 400px) {
+    #TopBar{
+        flex-direction: column;
+    }
+    #TopBar button{
+        margin-top: 10px;
+    }
+    #Category_Form #Form, #UP_Category_Form #UP_Form{
+        padding: 20px;
+    }
+}

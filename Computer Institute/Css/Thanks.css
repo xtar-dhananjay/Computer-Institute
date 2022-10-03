@@ -1,0 +1,58 @@
+#Main_Thanks{
+    max-width: 100%;
+    width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#ThanksBox{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    background: #8248ff42;
+    width: 600px;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid #8248ff86;
+    border-radius: 5px;
+}
+
+#ThanksBox img{
+    width: 100px;
+}
+
+#ThanksBox h4{
+    font-size: 20px;
+    color: #555555;
+    margin: 10px 0 5px;
+}
+
+#ThanksBox p{
+    font-weight: 400;
+    color: var(--Para-Color);
+    font-size: 15px;
+}
+
+#HomePageBtn{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#HomePageBtn button{
+    width: 150px;
+    height: 37px;
+    border: none;
+    background: var(--First-Color);
+    color: var(--White-Color);
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    #HomePageBtn button{
+        cursor: default;
+
+    }   
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+:root{
+    --Header-Color: #D4DCFF;
+    --First-Color: #8348FF;
+    --Second-Color: #EEC048;
+    --Font-Color: #333333;
+    --White-Color: #ffffff;
+    --Para-Color: #000000bd;
+    --Light-Blue: #899dff54;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--First-Color);
+    border-radius: 5px;
+}
+
+
+@media (max-width: 700px) {
+    button{
+        cursor: default;
+    }
+}

@@ -1,0 +1,108 @@
+#Main-About{
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#About_1{
+    margin-top: 30px;
+
+}
+
+#Institute_Details img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#Institute_Details div:last-child{
+    margin-top: 30px;
+}
+
+#Institute_Details div h2{
+    font-size: 28px;
+    color: var(--Font-Color);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+#Institute_Details div p{
+    font-size: 16px;
+    text-align: justify;
+    color: var(--Para-Color);
+}
+
+/* About_2 */
+#Institute_Team{
+    margin-top: 70px;
+    margin-bottom: 150px;
+}
+
+#Institute_Team h2{
+    text-align: center;
+    background: var(--First-Color);
+    font-size: 25px;
+    color: var(--White-Color);
+    padding: 7px 0;
+    font-weight: 400;
+}
+
+#AllTeam{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px 70px;
+    margin-top: 30px;
+}
+
+#AllTeam .Member{
+    background: #DAC9FF;
+    border: 1px solid rgba(131, 72, 255, 0.5);
+    padding: 15px;
+    border-radius: 3px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.81, 1.39, 0.62, 1.04);
+}
+
+#AllTeam .Member img{
+    width: 100%;
+}
+
+#AllTeam .Member:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+#AllTeam .Member .Member_Name{
+    color: var(--Font-Color);
+    font-size: 18px;
+}
+
+#AllTeam .Member .Member_Position{
+    color: var(--First-Color);
+    font-size: 16px;
+}
+
+
+@media (max-width: 900px){
+    #AllTeam{
+        grid-gap: 30px;
+    }
+}
+
+@media (max-width: 800px){
+    #AllTeam{
+        grid-gap: 20px;
+    }
+}
+
+
+@media (max-width: 700px){
+    #AllTeam{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px){
+    #AllTeam{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

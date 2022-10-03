@@ -1,0 +1,170 @@
+#HomeDetails-Page{
+    padding: 20px;
+}
+/* HomeDetails_1 */
+#TopBar{
+    width: 100%;
+    background: var(--Main-Color);
+    padding: 14px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TopBar h2{
+    font-size: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--White-Color);
+}
+
+#All_Feature{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 20px;
+}
+
+#All_Feature div{
+    background: rgba(130, 72, 255, 0.37);
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#All_Feature div img{
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+#All_Feature div p{
+    font-weight: 400;
+    text-align: left;
+    color: #444444;
+}
+
+#All_Feature div button{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    border-radius: 3px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* HomeDetails_2 */
+#HomeDetails_2{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #8248ffc0;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    z-index: -100;
+    transform: scale(0);
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.18, 1.18, 0.08, 1.14);
+}
+
+#HomeDetails_2.Active{
+    z-index: 100;
+    transform: scale(1);
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#HomeDetails_2 form{
+    background: var(--White-Color);
+    padding: 25px;
+    border-radius: 4px;
+    width: 500px;
+}
+
+#HomeDetails_2 form #Img_Box{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#HomeDetails_2 form #Img_Box img{
+    height: 70px;
+}
+
+#HomeDetails_2 form textarea{
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid #d3d3d3;
+    color: #444444;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+}
+
+#HomeDetails_2 form #Button_Box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#HomeDetails_2 form #Button_Box button{
+    width: 48%;
+    height: 38px;
+    border: none;
+    background: var(--Main-Color);
+    color: var(--White-Color);
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 5px;
+    border: 1px solid var(--Main-Color);
+    cursor: pointer;
+}
+
+#HomeDetails_2 form #Button_Box button:first-child{
+    background: unset;
+    color: var(--Main-Color);
+    font-weight: 400;
+}
+
+
+@media (max-width: 1450px) {
+    #All_Feature{
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 1350px) {
+    #All_Feature{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    #All_Feature{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #All_Feature div button, #HomeDetails_2 form #Button_Box button{
+        cursor: default;
+    }
+}
+
+@media (max-width: 400px) {
+    #HomeDetails_2 form{
+        padding: 15px;
+    }
+}
